@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Memo</title>
-	<!-- 
+    <title>Memo</title>
+    <!-- 
 	<meta name="description" content="A simple HTML5 Template for new projects.">
   	<meta name="author" content="SitePoint">
 
@@ -18,10 +18,11 @@
   	<meta property="og:image" content="image.png"> 
 
 	<link rel="icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
--->
-	<script src="https://use.fontawesome.com/ca81c89b30.js"></script>
-	<script type="module" src="js/index.js"></script>
+  	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	-->
+    <script src="https://use.fontawesome.com/ca81c89b30.js"></script>
+	<script src="js/main.js"></script>
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -31,14 +32,20 @@
 		<button id="hamburger" class="mobile-hamburger fa fa-bars"></button>
 		<h1><a href="index.html" class="inherit-link">Memo Decks</a></h1>
 		<ul class="topnav">
-			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="index.html">Home</a></li>
 			<li><a href="create-deck.html">New Deck</a></li>
-			<li><a href="about.html">About</a></li>
+			<li><a href="about.html" class="active">About</a></li>
 		</ul>
 	</header>
 
-	<div class="center-content" id="main-content">
-	</div>
+    <div class="center-content">
+        <p>
+			A flashcard system using spaced repetition learning.
+			<br>Currently a casual side project =).
+		</p>
+
+    </div>
+
 </body>
 
 </html>

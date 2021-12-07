@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --bg-color: white;
+  --off-color: #efefef;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+  line-height: 1.7em;
+}
+
+h1 {
+  white-space: nowrap;
+  color: #04aa6d;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 0 auto;
+  line-height: 2em;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.center-content {
+  position: relative;
+  padding: 0;
+  margin: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  width: 100%;
+}
+
+.inherit-link {
+  color: inherit;
+  text-decoration-line: inherit;
+}
+
+/**************
+ Navbar/footer stuff */
+
+.global-header {
+  border-bottom: 1px solid #d5d5d5;
+  margin-bottom: 10px;
+  padding: 3px;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar stuff end */
+
+.mobile-hamburger {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  font-size: xx-large;
+  z-index: 2;
+}
+
+.mobile-hamburger:hover {
+  cursor: pointer;
+}
+
+ul.topnav li a.active {
+  /* Current opened page represented in navbar */
+  font-weight: bold;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+  ul.topnav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    margin: 0;
+    padding: 50px 0 0 0;
+    list-style-type: none;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-bottom: 1px solid #d5d5d5;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  ul.topnav li {
+    text-align: right;
+    font-size: 20px;
+    border-top: 1px solid #d5d5d5;
+    display: flex;
+    align-items: center;
+  }
+
+  ul.topnav li a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 600px) {
+  .mobile-hamburger {
+    display: none;
+  }
+
+  .center-content {
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    background-color: var(--bg-color);
+    padding: 1em;
+  }
+
+  body {
+    background-color: #efefef;
+  }
+
+  h1 {
+    margin: 0 0 0 10%;
+  }
+
+  .column {
+    flex: 50%;
+    margin: 0 10px;
+  }
+
+  ul.topnav {
+    all: unset;
+    /* Override mobile dropdown when opened */
+    width: 80% !important;
+    margin: auto;
+    list-style-type: none;
+    text-align: right;
+    padding: 0 10% 0 0;
+  }
+
+  ul.topnav li {
+    display: inline;
+  }
+
+  ul.topnav li a {
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  ul.topnav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+  }
+}
+
+input {
+  padding: 6px;
+  margin: 8px 0;
+}
+
+.column-left {
+  flex: 75%;
+}
+
+.column-right {
+  flex: 172px;
+  margin: 0 10px;
+}
+
+#deck-icon-btn {
+  width: 100%;
+  height: 172px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#deck-description {
+  width: 100%;
+  height: 100px;
+  margin: 8px 0;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+input[type="text"], select {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.flashcard {
+  display: inline-block;
+  position: relative;
+  width: 12em;
+  margin: 8px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--bg-color);
+}
+
+.flashcard>textarea {
+  width: 90%;
+  resize: none;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.flashcard>textarea:focus {
+  outline: 1px solid black;
+}
+
+.flashcard>.name {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.flashcard>.close-btn {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: transparent;
+  font-size: larger;
+}
+
+.flashcard>.close-btn:hover {
+  background-color: red;
+}
+
+#question {
+  font-size: x-large;
+}
+
+#answer-input {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: x-large;
+  text-align: center;
+  outline: none;
+}
