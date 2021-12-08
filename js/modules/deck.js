@@ -1,4 +1,4 @@
-import Queue from '../../_snowpack/pkg/yocto-queue.js'; // Time to wait for next review in milliseconds for each stage
+import Queue from '/_snowpack/pkg/yocto-queue.js'; // Time to wait for next review in milliseconds for each stage
 
 const stageWait = {
   0: 4 * 60 * 60 * 1000,
