@@ -11,7 +11,6 @@
 
 body {
   margin: 0;
-  overflow-x: hidden;
 }
 
 p {
@@ -38,6 +37,10 @@ a {
 a:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .center-content {
@@ -71,6 +74,7 @@ a:hover {
   margin-bottom: 10px;
   padding: 3px;
   width: 100%;
+  box-sizing: border-box;
   background-color: var(--bg-color);
   display: flex;
   align-items: center;
@@ -111,7 +115,7 @@ ul.topnav li a.active {
     text-align: center;
     border-bottom: 1px solid #d5d5d5;
     z-index: 1;
-    transition: 0.5s;
+    transition: 0.2s;
   }
 
   ul.topnav li {
@@ -292,4 +296,21 @@ input[type="submit"]:hover {
   font-size: x-large;
   text-align: center;
   outline: none;
+  height: 2em;
+}
+
+#input-field {
+  position: relative;
+  margin: 0;
+
+}
+
+#next-card-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.5em;
+  border: none;
+  background-color: transparent;
 }
