@@ -24,7 +24,7 @@ h1 {
   margin: 0 auto;
 }
 
-h2 {
+h2, #page-title{
   margin: 0 auto;
   line-height: 2em;
 }
@@ -230,12 +230,15 @@ input[type="text"], select {
 }
 
 input[type="submit"] {
-  width: 100%;
   text-align: center;
   background-color: #04aa6d;
   color: white;
   border: none;
   cursor: pointer;
+}
+
+#submitDeck {
+  width: 100%;
 }
 
 input[type="submit"]:hover {
@@ -271,10 +274,10 @@ input[type="submit"]:hover {
 
 .flashcard>.close-btn {
   position: absolute;
-  top: -1px;
-  right: -1px;
-  height: 25px;
-  width: 25px;
+  top: 0;
+  right: 0;
+  height: 26px;
+  width: 26px;
   border: none;
   background-color: transparent;
   font-size: larger;
@@ -313,4 +316,28 @@ input[type="submit"]:hover {
   font-size: 1.5em;
   border: none;
   background-color: transparent;
+}
+
+.deck-display {
+  border: 1px solid black;
+  margin: 1em 0;
+  padding: 0.5em;
+  position: relative;
+}
+
+.deck-title {
+  margin: 0;
+  font-weight: normal;
+}
+
+.deck-edit-btn {
+  color: black;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  font-size: large;
+}
+
+#deleteDeckBtn:hover {
+  background-color: red;
 }
