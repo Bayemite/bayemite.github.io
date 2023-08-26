@@ -115,7 +115,6 @@ ul.topnav li a.active {
     text-align: center;
     border-bottom: 1px solid #d5d5d5;
     z-index: 1;
-    transition: 0.2s;
   }
 
   ul.topnav li {
